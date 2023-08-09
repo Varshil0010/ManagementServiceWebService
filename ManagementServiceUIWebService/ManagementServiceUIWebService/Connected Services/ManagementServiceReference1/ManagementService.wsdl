@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="insertEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employeeBO" type="tns:EmployeeBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EmployeeBO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JoBTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="insertEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertEmployeeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employeeBO" type="tns:EmployeeBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updateEmployeeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employeeBO" type="tns:EmployeeBO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deleteEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="deleteEmployeeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insertEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:insertEmployee" />
+  </wsdl:message>
+  <wsdl:message name="insertEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:insertEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:updateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="updateEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:updateEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:deleteEmployee" />
+  </wsdl:message>
+  <wsdl:message name="deleteEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:deleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ManagementServiceSoap">
+    <wsdl:operation name="insertEmployee">
+      <wsdl:input message="tns:insertEmployeeSoapIn" />
+      <wsdl:output message="tns:insertEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployee">
+      <wsdl:input message="tns:updateEmployeeSoapIn" />
+      <wsdl:output message="tns:updateEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <wsdl:input message="tns:deleteEmployeeSoapIn" />
+      <wsdl:output message="tns:deleteEmployeeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManagementServiceSoap" type="tns:ManagementServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertEmployee">
+      <soap:operation soapAction="http://tempuri.org/insertEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployee">
+      <soap:operation soapAction="http://tempuri.org/updateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <soap:operation soapAction="http://tempuri.org/deleteEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ManagementServiceSoap12" type="tns:ManagementServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertEmployee">
+      <soap12:operation soapAction="http://tempuri.org/insertEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployee">
+      <soap12:operation soapAction="http://tempuri.org/updateEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployee">
+      <soap12:operation soapAction="http://tempuri.org/deleteEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManagementService">
+    <wsdl:port name="ManagementServiceSoap" binding="tns:ManagementServiceSoap">
+      <soap:address location="https://localhost:44313/ManagementService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ManagementServiceSoap12" binding="tns:ManagementServiceSoap12">
+      <soap12:address location="https://localhost:44313/ManagementService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessObject;
+using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,9 +20,30 @@ namespace WebApplication1
     {
 
         [WebMethod]
-        public string HelloWorld()
+        public int insertEmployee(EmployeeBO employeeBO)
         {
-            return "Hello World";
+            EmployeeDA dataAccess = new EmployeeDA();
+            var result = dataAccess.insertEmployee(employeeBO);
+
+            return result;
+        }
+
+        [WebMethod]
+        public int updateEmployee(EmployeeBO employeeBO)
+        {
+            EmployeeDA dataAccess = new EmployeeDA();
+            var result = dataAccess.updateEmployee(employeeBO);
+
+            return result;
+        }
+
+        [WebMethod]
+        public int deleteEmployee(EmployeeBO employeeBO)
+        {
+            EmployeeDA dataAccess = new EmployeeDA();
+            var result = dataAccess.deleteEmployee(employeeBO);
+
+            return result;
         }
     }
 }

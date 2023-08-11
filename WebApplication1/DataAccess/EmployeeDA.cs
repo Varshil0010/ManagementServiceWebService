@@ -47,7 +47,7 @@ namespace DataAccess
 
         public int updateEmployee(EmployeeBO employeeBO)
         {
-            SqlConnection connection = new SqlConnection();
+            SqlConnection connection = new SqlConnection(connectionString);
 
             try
             {
@@ -79,7 +79,7 @@ namespace DataAccess
 
         public int deleteEmployee(EmployeeBO employeeBO)
         {
-            SqlConnection connection = new SqlConnection();
+            SqlConnection connection = new SqlConnection(connectionString);
 
             try
             {

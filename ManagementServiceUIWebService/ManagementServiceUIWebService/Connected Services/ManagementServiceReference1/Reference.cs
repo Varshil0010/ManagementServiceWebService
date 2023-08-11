@@ -137,6 +137,202 @@ namespace ManagementServiceUIWebService.ManagementServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AttendenceBO", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class AttendenceBO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int AttendenceIDField;
+        
+        private int EmployeeIDField;
+        
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ReasonField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int AttendenceID {
+            get {
+                return this.AttendenceIDField;
+            }
+            set {
+                if ((this.AttendenceIDField.Equals(value) != true)) {
+                    this.AttendenceIDField = value;
+                    this.RaisePropertyChanged("AttendenceID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int EmployeeID {
+            get {
+                return this.EmployeeIDField;
+            }
+            set {
+                if ((this.EmployeeIDField.Equals(value) != true)) {
+                    this.EmployeeIDField = value;
+                    this.RaisePropertyChanged("EmployeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Reason {
+            get {
+                return this.ReasonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReasonField, value) != true)) {
+                    this.ReasonField = value;
+                    this.RaisePropertyChanged("Reason");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PerfomanceBO", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class PerfomanceBO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int PerfomanceIDField;
+        
+        private int EmployeeIDField;
+        
+        private System.DateTime ReviewDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GoalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ReviewField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int PerfomanceID {
+            get {
+                return this.PerfomanceIDField;
+            }
+            set {
+                if ((this.PerfomanceIDField.Equals(value) != true)) {
+                    this.PerfomanceIDField = value;
+                    this.RaisePropertyChanged("PerfomanceID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int EmployeeID {
+            get {
+                return this.EmployeeIDField;
+            }
+            set {
+                if ((this.EmployeeIDField.Equals(value) != true)) {
+                    this.EmployeeIDField = value;
+                    this.RaisePropertyChanged("EmployeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public System.DateTime ReviewDate {
+            get {
+                return this.ReviewDateField;
+            }
+            set {
+                if ((this.ReviewDateField.Equals(value) != true)) {
+                    this.ReviewDateField = value;
+                    this.RaisePropertyChanged("ReviewDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Goal {
+            get {
+                return this.GoalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GoalField, value) != true)) {
+                    this.GoalField = value;
+                    this.RaisePropertyChanged("Goal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string Review {
+            get {
+                return this.ReviewField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReviewField, value) != true)) {
+                    this.ReviewField = value;
+                    this.RaisePropertyChanged("Review");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ManagementServiceReference1.ManagementServiceSoap")]
     public interface ManagementServiceSoap {
@@ -161,6 +357,20 @@ namespace ManagementServiceUIWebService.ManagementServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/deleteEmployee", ReplyAction="*")]
         System.Threading.Tasks.Task<ManagementServiceUIWebService.ManagementServiceReference1.deleteEmployeeResponse> deleteEmployeeAsync(ManagementServiceUIWebService.ManagementServiceReference1.deleteEmployeeRequest request);
+        
+        // CODEGEN: Generating message contract since element name attendenceBO from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddAttendence", ReplyAction="*")]
+        ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceResponse AddAttendence(ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddAttendence", ReplyAction="*")]
+        System.Threading.Tasks.Task<ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceResponse> AddAttendenceAsync(ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequest request);
+        
+        // CODEGEN: Generating message contract since element name perfomanceBO from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddPerformence", ReplyAction="*")]
+        ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceResponse AddPerformence(ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddPerformence", ReplyAction="*")]
+        System.Threading.Tasks.Task<ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceResponse> AddPerformenceAsync(ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -367,6 +577,142 @@ namespace ManagementServiceUIWebService.ManagementServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddAttendenceRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddAttendence", Namespace="http://tempuri.org/", Order=0)]
+        public ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequestBody Body;
+        
+        public AddAttendenceRequest() {
+        }
+        
+        public AddAttendenceRequest(ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddAttendenceRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ManagementServiceUIWebService.ManagementServiceReference1.AttendenceBO attendenceBO;
+        
+        public AddAttendenceRequestBody() {
+        }
+        
+        public AddAttendenceRequestBody(ManagementServiceUIWebService.ManagementServiceReference1.AttendenceBO attendenceBO) {
+            this.attendenceBO = attendenceBO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddAttendenceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddAttendenceResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceResponseBody Body;
+        
+        public AddAttendenceResponse() {
+        }
+        
+        public AddAttendenceResponse(ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddAttendenceResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int AddAttendenceResult;
+        
+        public AddAttendenceResponseBody() {
+        }
+        
+        public AddAttendenceResponseBody(int AddAttendenceResult) {
+            this.AddAttendenceResult = AddAttendenceResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddPerformenceRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddPerformence", Namespace="http://tempuri.org/", Order=0)]
+        public ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequestBody Body;
+        
+        public AddPerformenceRequest() {
+        }
+        
+        public AddPerformenceRequest(ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddPerformenceRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ManagementServiceUIWebService.ManagementServiceReference1.PerfomanceBO perfomanceBO;
+        
+        public AddPerformenceRequestBody() {
+        }
+        
+        public AddPerformenceRequestBody(ManagementServiceUIWebService.ManagementServiceReference1.PerfomanceBO perfomanceBO) {
+            this.perfomanceBO = perfomanceBO;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddPerformenceResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddPerformenceResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceResponseBody Body;
+        
+        public AddPerformenceResponse() {
+        }
+        
+        public AddPerformenceResponse(ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddPerformenceResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int AddPerformenceResult;
+        
+        public AddPerformenceResponseBody() {
+        }
+        
+        public AddPerformenceResponseBody(int AddPerformenceResult) {
+            this.AddPerformenceResult = AddPerformenceResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ManagementServiceSoapChannel : ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -467,6 +813,56 @@ namespace ManagementServiceUIWebService.ManagementServiceReference1 {
             inValue.Body = new ManagementServiceUIWebService.ManagementServiceReference1.deleteEmployeeRequestBody();
             inValue.Body.employeeBO = employeeBO;
             return ((ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap)(this)).deleteEmployeeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceResponse ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap.AddAttendence(ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequest request) {
+            return base.Channel.AddAttendence(request);
+        }
+        
+        public int AddAttendence(ManagementServiceUIWebService.ManagementServiceReference1.AttendenceBO attendenceBO) {
+            ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequest inValue = new ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequest();
+            inValue.Body = new ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequestBody();
+            inValue.Body.attendenceBO = attendenceBO;
+            ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceResponse retVal = ((ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap)(this)).AddAttendence(inValue);
+            return retVal.Body.AddAttendenceResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceResponse> ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap.AddAttendenceAsync(ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequest request) {
+            return base.Channel.AddAttendenceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceResponse> AddAttendenceAsync(ManagementServiceUIWebService.ManagementServiceReference1.AttendenceBO attendenceBO) {
+            ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequest inValue = new ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequest();
+            inValue.Body = new ManagementServiceUIWebService.ManagementServiceReference1.AddAttendenceRequestBody();
+            inValue.Body.attendenceBO = attendenceBO;
+            return ((ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap)(this)).AddAttendenceAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceResponse ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap.AddPerformence(ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequest request) {
+            return base.Channel.AddPerformence(request);
+        }
+        
+        public int AddPerformence(ManagementServiceUIWebService.ManagementServiceReference1.PerfomanceBO perfomanceBO) {
+            ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequest inValue = new ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequest();
+            inValue.Body = new ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequestBody();
+            inValue.Body.perfomanceBO = perfomanceBO;
+            ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceResponse retVal = ((ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap)(this)).AddPerformence(inValue);
+            return retVal.Body.AddPerformenceResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceResponse> ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap.AddPerformenceAsync(ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequest request) {
+            return base.Channel.AddPerformenceAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceResponse> AddPerformenceAsync(ManagementServiceUIWebService.ManagementServiceReference1.PerfomanceBO perfomanceBO) {
+            ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequest inValue = new ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequest();
+            inValue.Body = new ManagementServiceUIWebService.ManagementServiceReference1.AddPerformenceRequestBody();
+            inValue.Body.perfomanceBO = perfomanceBO;
+            return ((ManagementServiceUIWebService.ManagementServiceReference1.ManagementServiceSoap)(this)).AddPerformenceAsync(inValue);
         }
     }
 }

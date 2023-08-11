@@ -45,5 +45,23 @@ namespace WebApplication1
 
             return result;
         }
+
+        [WebMethod]
+        public int AddAttendence(AttendenceBO attendenceBO)
+        {
+            AttendenceDA attendenceDA = new AttendenceDA();
+            var result = attendenceDA.AddAttendence(attendenceBO);
+
+            return result;
+        }
+
+        [WebMethod]
+        public int AddPerformence(PerfomanceBO perfomanceBO)
+        {
+            PerfomenceDA perfomenceDA = new PerfomenceDA();
+            var result = perfomenceDA.InsertPerformence(perfomanceBO);
+
+            return result;
+        }
     }
 }
